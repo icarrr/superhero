@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BATMAN-Log out</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+		<style media="screen">
+		table tr td, table tr th {padding:0.625rem;}
+		table tr:nth-of-type(2n) {background:none repeat scroll 0 0 #d4d4d4;}
+		th,table tr:nth-of-type(2n) td {border-right:1px solid #fff;}
+		td {border:1px solid #fff;}
+		table {margin-top: -30px;}
+		</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+          <!-- box login -->
+          <div class="batman-box">
+            <img class="profile-img" src="img/go.png" alt="batmanLogin">
+						<div class="text-center">
+							<h1 class="login-title">Bye superhero</h1>
+							<div class="alert alert-info" role="alert">
+								<p>Sampai jumpa di arena pertarungan berikutnya</p>
+							</div>
+						</div>
+            <div class="form-signin">
+							<table border="1" width="100%" style="">
+								<tr>
+									<td>Your ID</td>
+									<td>:</td>
+									<td>$(username)</td>
+								</tr>
+								<tr>
+									<td>ID Device</td>
+									<td>:</td>
+									<td>$(mac)</td>
+								</tr>
+								<tr>
+									<td>IP Address</td>
+									<td>:</td>
+									<td>$(ip)</td>
+								</tr>
+								<tr>
+									<td>Time</td>
+									<td>:</td>
+									<td>$(uptime)</td>
+								</tr>
+								$(if session-time-left)
+									<tr>
+										<td>Left:</td>
+										<td>:</td>
+										<td>$(session-time-left)</td>
+									</tr>
+								$(endif)
+								<tr>
+									<td>Upload</td>
+									<td>:</td>
+									<td>$(bytes-in-nice)</td>
+								</tr>
+								<tr>
+									<td>Download</td>
+									<td>:</td>
+									<td>$(bytes-out-nice)</td>
+								</tr>
+							</table>
+							<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+								<button type="submit" name="login" class="buton btn-block">Bertarung lagi!!!</button>
+							</form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
